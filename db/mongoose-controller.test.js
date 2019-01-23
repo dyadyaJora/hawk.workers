@@ -42,6 +42,15 @@ const TEST_EVENT = {
   }
 };
 
+/**
+ * Hawk payload data
+ */
+const TEST_PAYLOAD_DATA = {
+  payload: {
+    any: 'payload'
+  }
+};
+
 describe('DB Controller', async () => {
   it('should connect to db', async () => {
     expect.assertions(1);
@@ -87,7 +96,7 @@ describe('Event model testing', async () => {
   });
 });
 
-describe.skip('Data(payload) model testing', async () => {
+describe('Data(payload) model testing', async () => {
   beforeAll(() => {
     db.connect(MONGO_URL);
   });
@@ -98,10 +107,10 @@ describe.skip('Data(payload) model testing', async () => {
 
   it('should save payload data', async () => {
     expect.assertions(1);
-    await expect(db.savePayloadData(TEST_EVENT)).resolves.not.toThrowError();
+    await expect(db.savePayloadData(TEST_PAYLOAD_DATA)).resolves.not.toThrowError();
   });
 
-  it('should throw validation error on bad payload data', async () => {
+  it.skip('should throw validation error on bad payload data', async () => {
     expect.assertions(1);
     let badEvent = TEST_EVENT;
 

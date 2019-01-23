@@ -1,6 +1,7 @@
 const debug = require('debug')('db-controller');
 const mongoose = require('mongoose');
 const Event = require('./models/event');
+const Data = require('./models/data');
 
 mongoose.Promise = Promise;
 
@@ -45,6 +46,20 @@ async function saveEvent(obj) {
 }
 
 /**
+ * Save payload data to database
+ *
+ * @param {Object} obj - Payload data object
+ * @param {Object} obj.payload - payload
+ * @param {Object} obj.meta - optional meta info
+ * @returns {Promise}
+ */
+async function savePayloadData(obj) {
+  let payloadData = new Data(obj);
+
+  return payloadData.save();
+}
+
+/**
  * Close mongoose connection
  *
  * @returns Promise<void>
@@ -56,5 +71,6 @@ async function close() {
 module.exports = {
   connect,
   saveEvent,
-  close
+  close,
+  savePayloadData
 };
