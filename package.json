@@ -19,6 +19,7 @@
     },
     "devDependencies": {
         "@codexteam/hawk.nodejs": "git+https://github.com/codex-team/hawk.nodejs.git#hawk2.0",
+        "coveralls": "^3.0.2",
         "eslint": "^5.12.0",
         "eslint-config-codex": "github:codex-team/eslint-config",
         "jest": "^23.6.0",
