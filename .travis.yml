@@ -9,12 +9,12 @@ before_install:
   - echo "install"
   - chmod +x ./shells/env-config.sh
   - ./shells/env-config.sh
+  - npm i -g jest
 install:
   - npm install
 before_script:
   - "echo script"
 script:
   - npm run lint
-  - npm run test:base
-  - npm run test:db
+  - jest ./ --coverage
   - echo done
