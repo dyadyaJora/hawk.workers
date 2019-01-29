@@ -16,5 +16,5 @@ before_script:
   - "echo script"
 script:
   - npm run lint
-  - jest ./ --coverage
+  - jest ./ --coverage --reporters="jest-junit"
   - echo done
