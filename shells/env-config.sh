@@ -1,5 +1,5 @@
 # For different .env files in each folders
-envfile=".env.filename"
+envfile=".env.sample"
 
 function pathedit {
   str=$0
