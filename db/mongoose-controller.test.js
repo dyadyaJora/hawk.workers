@@ -14,11 +14,11 @@ const CATCHER_TOKEN = process.env.CATCHER_TOKEN || 'randomtoken';
  * @constant
  */
 const CATCHER_TYPE = 'errors/nodejs';
-
+console.log(process.env.MONGO_URL);
 /**
  * MongoDB connection URL
  */
-const MONGO_URL = process.env.MONGO_URL || 'mongodb://localhost:27017/hawk-dev';
+const MONGO_URL = process.env.MONGO_URL;
 
 /**
  * Hawk test event
