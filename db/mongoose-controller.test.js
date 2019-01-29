@@ -44,8 +44,6 @@ const TEST_EVENT = {
 
 describe('DB Controller', async () => {
   it('should connect to db', async () => {
-    
-    console.log(process.env.MONGO_URL, 'mongo url');
     expect.assertions(1);
     await expect(db.connect(MONGO_URL)).resolves.not.toThrowError();
   });
