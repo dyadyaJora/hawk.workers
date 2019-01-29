@@ -11,7 +11,7 @@ before_install:
   - chmod +x ./shells/env-config.sh
   - ./shells/env-config.sh
 install:
-  - npm install
+  - yarn install
 before_script:
   - "echo script"
 script:
