@@ -16,4 +16,5 @@ before_script:
 script:
   - npm run lint
   - npm run test:base
+  - npm run test:db
   - echo done
