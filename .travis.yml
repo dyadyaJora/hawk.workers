@@ -7,8 +7,6 @@ services:
   - rabbitmq
 before_install:
   - echo "install"
-  - chmod +x ./shells/env-config.sh
-  - ./shells/env-config.sh
   - npm i -g jest
 install:
   - npm install
