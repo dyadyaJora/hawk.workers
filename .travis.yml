@@ -16,5 +16,5 @@ before_script:
   - "echo script"
 script:
   - yarn lint
-  - jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
+  - jest --coverage && codecov
   - echo done
