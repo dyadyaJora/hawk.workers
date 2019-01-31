@@ -178,4 +178,7 @@ module.exports = {
 
   // Whether to use watchman for file crawling
   // watchman: true,
+  
+  "coverageDirectory": "./coverage/",
+  "collectCoverage": true
 };
